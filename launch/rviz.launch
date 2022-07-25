@@ -1,0 +1,4 @@
+<launch>
+    <node type="rviz" name="rviz_nissan" pkg="rviz" args="-d $(find primitive_lidar_filter)/launch/default.rviz" />
+</launch>
+

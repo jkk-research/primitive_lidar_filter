@@ -1,0 +1,17 @@
+
+
+<launch>
+  <node pkg="primitive_lidar_filter" type="box_node" name="box_filter" output="screen" >
+    <!-- center position xyz -->
+    <param name="position_x" value="0.0"/>
+    <param name="position_y" value="0.0"/>
+    <param name="position_y" value="0.0"/>
+    <!-- size of a rectangle -->
+    <param name="length_x" value="4.2"/>
+    <param name="length_y" value="1.77"/>
+    <param name="length_z" value="1.7"/>
+    <param name="topic_name_in" value="/left_os1/os1_cloud_node/points"/>
+    <param name="topic_name_out" value="/filtered"/>
+  </node>
+  <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconf" output="screen" />
+</launch>
